@@ -16,7 +16,7 @@ function LandingPageCard({ cardDetails }) {
 
   return (
     <>
-      <div className="landingPageCard bg-white border-2 border-solid border-black rounded-lg m-2 p-2  flex flex-col gap-2">
+      <div className="landingPageCard bg-white border-2 border-solid border-black rounded-lg m-2 p-2 flex flex-col flex-wrap justify-between gap-2 min-w-lg w-1/2">
         <div className="flex flex-col gap-1">
           <h2 className="cardTitle text-2xl font-zilla font-bold">
             {cardTitle}
@@ -25,14 +25,15 @@ function LandingPageCard({ cardDetails }) {
         </div>
 
         <p className="cardDescription">{cardDescription}</p>
-
-        <DarkBlueButton
-          // className="cardButton w-48 max-w-4"    !!!   WORK HERE    !!!
-          buttonDetails={{
-            buttonPath: `${cardButtonPath}`,
-            buttonName: `${cardButton}`,
-          }}
-        />
+        <div className="flex justify-center">
+          <DarkBlueButton
+            // className="cardButton w-48 max-w-4"    !!!   WORK HERE  - TO ADD CUSTOM CLASSES TO SPECIFIC CARD  !!!
+            buttonDetails={{
+              buttonPath: `${cardButtonPath}`,
+              buttonName: `${cardButton}`,
+            }}
+          />
+        </div>
       </div>
     </>
   );

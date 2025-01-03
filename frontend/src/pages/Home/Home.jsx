@@ -46,7 +46,7 @@ function Home() {
         <h1>{landingPageTitle}</h1>
       </div>
 
-      <div>
+      <div className="flex justify-center">
         {allCardDetails.map((cardDetails) => (
           <LandingPageCard cardDetails={cardDetails} key={cardDetails.id} />
         ))}
