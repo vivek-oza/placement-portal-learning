@@ -16,10 +16,9 @@ function LandingPageCard({cardDetails}) {
             <h3 className="cardSubTitle">{cardSubtitle}</h3>
 
             <p className="cardDescription">{cardDescription}</p>
-
-            <button className="cardButton" onClick={onCardButtonClicked}>
-              <DarkBlueButton buttonDetails={{buttonPath:`${cardButtonPath}` ,buttonName: `${cardButton}` }}/>
-            </button>
+            
+            <DarkBlueButton className="cardButton" buttonDetails={{buttonPath:`${cardButtonPath}` ,buttonName: `${cardButton}` }}/>
+            
         </div>
     </>
   );
