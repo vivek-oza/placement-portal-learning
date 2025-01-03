@@ -1,7 +1,6 @@
 import React from "react";
-import './Home.css'
+import "./Home.css";
 import LandingPageCard from "../../components/LandingPageCard/LandingPageCard";
-import Navbar from "../../components/Navbar/Navbar";
 
 function Home() {
   const allCardDetails = [
@@ -11,7 +10,8 @@ function Home() {
       cardSubTitle: "Simplify, Create, and Manage Placements Effortlessly.",
       cardDescription:
         "Create job postings, manage applications, set deadlines, analyze job stats, and notify students—all in one user-friendly platform designed for campus placement coordinators.",
-      cardButton: "create placement",
+      cardButton: "Create Placement",
+      cardButtonPath: "/Signup",
     },
     {
       id: 2,
@@ -20,7 +20,8 @@ function Home() {
       cardDescription:
         "Easily browse job opportunities, apply with pre-filled forms, track application status, and stay updated with notifications for deadlines and new postings—all tailored for your course and department.",
       cardButton: "Apply to Placement",
-    }
+      cardButtonPath: "/Signup",
+    },
   ];
 
   // const cardDetailsCoordinatorObject = {
@@ -41,7 +42,6 @@ function Home() {
 
   return (
     <>
-      
       <div>
         <h1>{landingPageTitle}</h1>
       </div>
@@ -49,9 +49,7 @@ function Home() {
       <div>
         {allCardDetails.map((cardDetails) => (
           <LandingPageCard cardDetails={cardDetails} key={cardDetails.id} />
-        )
-        )
-        }
+        ))}
       </div>
     </>
   );

@@ -1,7 +1,8 @@
 import React from 'react'
+import DarkBlueButton from '../buttons/DarkBlueButton';
 
 function LandingPageCard({cardDetails}) {
-  const { cardTitle, cardSubtitle, cardDescription, cardButton } = cardDetails;
+  const { cardTitle, cardSubtitle, cardDescription, cardButton, cardButtonPath } = cardDetails;
 
   function onCardButtonClicked() {
     alert("Button Clicked")
@@ -17,7 +18,7 @@ function LandingPageCard({cardDetails}) {
             <p className="cardDescription">{cardDescription}</p>
 
             <button className="cardButton" onClick={onCardButtonClicked}>
-                {cardButton}
+              <DarkBlueButton buttonDetails={{buttonPath:`${cardButtonPath}` ,buttonName: `${cardButton}` }}/>
             </button>
         </div>
     </>
