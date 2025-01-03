@@ -1,7 +1,7 @@
 import React from "react";
-import '../css/Home.css'
-import LandingPageCard from "../components/LandingPageCard/LandingPageCard";
-import Navbar from "../components/Navbar/Navbar";
+import './Home.css'
+import LandingPageCard from "../../components/LandingPageCard/LandingPageCard";
+import Navbar from "../../components/Navbar/Navbar";
 
 function Home() {
   const allCardDetails = [
