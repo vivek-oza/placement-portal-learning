@@ -16,7 +16,7 @@ function LandingPageCard({ cardDetails }) {
 
   return (
     <>
-      <div className="landingPageCard bg-white border-2 border-solid border-black rounded-lg m-2 p-2 flex flex-col flex-wrap justify-between gap-2 min-w-lg w-1/2">
+      <div className="landingPageCard bg-white border-2 border-solid border-black rounded-lg m-2 p-2 flex flex-col flex-wrap justify-between gap-2 max-w-lg">
         <div className="flex flex-col gap-1">
           <h2 className="cardTitle text-2xl font-zilla font-bold">
             {cardTitle}

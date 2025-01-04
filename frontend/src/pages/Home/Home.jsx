@@ -42,11 +42,13 @@ function Home() {
 
   return (
     <>
-      <div>
-        <h1>{landingPageTitle}</h1>
+      <div className="container mx-auto">
+        <p className="py-16 font-zilla md:text-6xl text-4xl font-bold text-center">
+          {landingPageTitle}
+        </p>
       </div>
 
-      <div className="flex justify-center">
+      <div className="container mx-auto flex flex-wrap justify-center">
         {allCardDetails.map((cardDetails) => (
           <LandingPageCard cardDetails={cardDetails} key={cardDetails.id} />
         ))}
