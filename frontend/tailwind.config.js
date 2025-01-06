@@ -7,11 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        themeLightBlue: '#daf6ff',
+        themeLightBlue: '#97e5ff',
+        themeAccentBlue: '#ffffff',
         themeDarkBlue: '#002351'
       },
       fontFamily: {
-        sans: ['DM Sans', 'sans-serif'],
+        sans: ['Work sans', 'sans-serif'],
+        dmsans: ['DM Sans', 'sans-serif'],
         poppins: ['Poppins', 'sans-serif'],
         zilla: ['Zilla Slab', 'serif'],
       }
