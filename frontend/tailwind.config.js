@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        themeLightBlue: '#97e5ff',
-        themeAccentBlue: '#ffffff',
+        themeLightBlue: '#CCE4FF',
+        themeAccentBlue: '#93C5Fd',
         themeDarkBlue: '#002351'
       },
       fontFamily: {

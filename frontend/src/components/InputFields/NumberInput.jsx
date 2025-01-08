@@ -1,13 +1,13 @@
 import React from "react";
 
-function TextInput(placeholderText) {
+function NumberInput(placeholderText) {
   const { placeholderText: placeholder } = placeholderText;
   return (
     <>
       <div className="text-input-parent p-2">
         <p className="font-medium">{placeholder}</p>
         <input
-          type="text"
+          type="number"
           placeholder={placeholder}
           className="p-2 min-h-12 min-w-full border-2 border-themeDarkBlue rounded-md "
         />
@@ -16,4 +16,4 @@ function TextInput(placeholderText) {
   );
 }
 
-export default TextInput;
+export default NumberInput;

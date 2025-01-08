@@ -37,7 +37,7 @@ function RadioInput({ radioGroupName, radioGroup, radioOptions }) {
       </div>
 
       {/* Radio Buttons */}
-      <div className="flex justify-start items-center gap-12">
+      <div className="flex justify-start items-center gap-8">
         {radioOptions.map((option, index) => (
           <div key={index} className="flex items-center gap-2">
             <input
@@ -45,7 +45,7 @@ function RadioInput({ radioGroupName, radioGroup, radioOptions }) {
               name={radioGroup}
               id={`${radioGroup}-${option}`}
               value={option}
-              className="w-12 h-12 border-2 border-black"
+              className="min-h-12 min-w-12 border-2 border-black"
             />
             <label htmlFor={`${radioGroup}-${option}`} className="font-medium">
               {option}

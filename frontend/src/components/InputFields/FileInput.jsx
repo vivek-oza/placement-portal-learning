@@ -1,19 +1,19 @@
 import React from "react";
 
-function TextInput(placeholderText) {
+function FileInput(placeholderText) {
   const { placeholderText: placeholder } = placeholderText;
   return (
     <>
       <div className="text-input-parent p-2">
         <p className="font-medium">{placeholder}</p>
         <input
-          type="text"
+          type="file"
           placeholder={placeholder}
-          className="p-2 min-h-12 min-w-full border-2 border-themeDarkBlue rounded-md "
+          className="p-2 min-h-12 min-w-full border-2 bg-white border-themeDarkBlue rounded-md "
         />
       </div>
     </>
   );
 }
 
-export default TextInput;
+export default FileInput;

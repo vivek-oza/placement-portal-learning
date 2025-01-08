@@ -47,35 +47,48 @@ import "./Login.css";
 import TextInput from "../../components/InputFields/TextInput";
 import LightBorderButton from "../../components/buttons/LightBorderButton";
 import RadioInput from "../../components/InputFields/RadioInput";
+import OptionInput from "../../components/InputFields/OptionInput";
 
 function Signup() {
   return (
-    <div className="container flex flex-col justify-center justify-self-center p-4 max-w-lg max-h-fit overflow-y-clip">
-      <form action="./IntermediatePage/AfterLogin">    //  !!!! CHANGE THIS !!!!
-        
-      <h1 className="text-4xl font-bold my-2 p-2">Login</h1>
+    <>
+      <div className="h-full flex justify-center items-center">
+        <div className="container flex flex-col justify-center justify-self-center p-2 max-w-md rounded-lg shadow-xl bg-themeAccentBlue">
+          <form action="./IntermediatePage/AfterLogin">
+            <h1 className="text-4xl font-zilla font-bold my-4 text-center">
+              Login
+            </h1>
+            {/* Input Fields */}
 
-      {/* Input Fields */}
-      <TextInput placeholderText="Email" />
-      <p className="helpText text-md font-normal text-red-500 px-2">
-        Please use university email if you are a coordinator.
-      </p>
+            
+            <TextInput placeholderText="Email" />
 
-      <TextInput placeholderText="Password" />
 
-      {/* Radio Input for Roles */}
-      <RadioInput
+            <p className="helpText text-md font-normal text-red-500 px-2">
+              Please use university email if you are a coordinator.
+            </p>
+            <TextInput placeholderText="Password" />
+            {/* Radio Input for Roles */}
+            {/* <RadioInput
         radioGroupName="Your Role"
         radioGroup="userRole"
         radioOptions={["Coordinator", "Student"]}
-      />
-
-      {/* Submit Button */}
-      <div className="w-full mt-4">
-        <LightBorderButton buttonDetails={{ buttonName: "CONTINUE" }} />
+      /> */}
+            <OptionInput
+              placeholderText="Role"
+              options={{
+                coordinator: "Coordinator",
+                student: "Student",
+              }}
+            />
+            {/* Submit Button */}
+            <div className="w-full my-4">
+              <LightBorderButton buttonDetails={{ buttonName: "CONTINUE" }} />
+            </div>
+          </form>
+        </div>
       </div>
-      </form>
-    </div>
+    </>
   );
 }
 

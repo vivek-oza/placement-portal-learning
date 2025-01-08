@@ -43,7 +43,7 @@ function Home() {
   return (
     <>
       <div className="container mx-auto">
-        <p className="py-16 font-zilla md:text-6xl text-4xl font-bold text-center">
+        <p className="py-12 font-zilla md:text-6xl text-4xl font-bold text-center">
           {landingPageTitle}
         </p>
       </div>

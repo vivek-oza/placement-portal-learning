@@ -47,11 +47,13 @@ import "./Signup.css";
 import TextInput from "../../components/InputFields/TextInput";
 import LightBorderButton from "../../components/buttons/LightBorderButton";
 import RadioInput from "../../components/InputFields/RadioInput";
+import OptionInput from "../../components/InputFields/OptionInput";
 
 function Signup() {
   return (
-    <div className="container flex flex-col justify-center justify-self-center p-4 max-w-lg max-h-fit overflow-y-clip">
-      <h1 className="text-4xl font-bold my-2 p-2">Signup</h1>
+    <div className="flex justify-center items-center">
+    <div className="container flex flex-col justify-center justify-self-center p-2 max-w-md bg-themeAccentBlue  rounded-lg shadow-2xl ">
+      <h1 className="text-4xl font-zilla font-bold my-2 p-2 text-center">Signup</h1>
 
       {/* Input Fields */}
       <TextInput placeholderText="Email" />
@@ -63,13 +65,23 @@ function Signup() {
       <TextInput placeholderText="Confirm Password" />
 
       {/* Radio Input for Roles */}
-      <RadioInput
+      {/* <RadioInput
         radioGroupName="Your Role"
         radioGroup="userRole"
         radioOptions={["Coordinator", "Student"]}
+      /> */}
+
+      <OptionInput
+        placeholderText="Role"
+        options={{
+          coordinator: "Coordinator",
+          student: "Student",
+        }}
       />
 
-      <LightBorderButton buttonDetails={{ buttonName: "GENERATE OTP" }} />
+      <div className="w-full mt-4">
+        <LightBorderButton buttonDetails={{ buttonName: "GENERATE OTP" }} />
+      </div>
 
       <TextInput placeholderText="Enter OTP Sent on Email" />
 
@@ -78,6 +90,7 @@ function Signup() {
         <LightBorderButton buttonDetails={{ buttonName: "CONTINUE" }} />
       </div>
     </div>
+    </div> 
   );
 }
 
